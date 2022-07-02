@@ -4,19 +4,15 @@ import java.util.Map;
 
 public class Trader extends User{
     Integer idTrader;
-    String name;
+    String nameTrader;
     String address;
     Map<Stock,Integer> stocks;
 
 
-    public Trader(String idUser, String name, String email, String phone) {
-        super(idUser, name, email, phone);
-    }
-
-    public Trader(String idUser, String name, String email, String phone, Integer idTrader, String name1, String address, Map<Stock, Integer> stocks) {
+    public Trader(String idUser, String name, String email, String phone, Integer idTrader, String nameTrader, String address, Map<Stock, Integer> stocks) {
         super(idUser, name, email, phone);
         this.idTrader = idTrader;
-        this.name = name1;
+        this.nameTrader = nameTrader;
         this.address = address;
         this.stocks = stocks;
     }
@@ -29,14 +25,12 @@ public class Trader extends User{
         this.idTrader = idTrader;
     }
 
-    @Override
-    public String getName() {
-        return name;
+    public String getNameTrader() {
+        return nameTrader;
     }
 
-    @Override
-    public void setName(String name) {
-        this.name = name;
+    public void setNameTrader(String nameTrader) {
+        this.nameTrader = nameTrader;
     }
 
     public String getAddress() {
